@@ -34,6 +34,12 @@ def callback():
 # 學你說話
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
+
+    if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef" and event.message.text == "誰是世界上最漂亮的媽媽":
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="小德蕙")
+        )
     
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
         line_bot_api.reply_message(
