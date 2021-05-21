@@ -45,6 +45,13 @@ def echo(event):
                 event.reply_token,
                 TextSendMessage(text=txt)
             )
+        elif event.message.text == "專案":
+            txt = Path('replies/projects.txt').read_text()
+            #txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
         else:
             line_bot_api.reply_message(
                 event.reply_token,
