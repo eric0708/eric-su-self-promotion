@@ -1,0 +1,3 @@
+Designed a web service to automatically provide a customized travel 
+plan based on user preferences. Implemented frontend with React, 
+backend with Node.js, and fetched data from MongoDB.

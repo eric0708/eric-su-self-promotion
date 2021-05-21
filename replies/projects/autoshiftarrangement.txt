@@ -1,0 +1,4 @@
+Real world problem provided by Cathay Life Insurance Co. Solved the 
+problem of arranging shifts manually on a monthly basis and achieve 
+optimal performance measures based on labor prediction and various 
+constraints using integer linear programming.

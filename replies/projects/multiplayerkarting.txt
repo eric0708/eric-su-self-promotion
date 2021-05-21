@@ -1,0 +1,3 @@
+Improved the QoS of multi-player connection game by reducing the number 
+of packets transferred under different situations and through the use 
+of interpolation.

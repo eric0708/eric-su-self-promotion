@@ -44,7 +44,7 @@
               "action": {
                 "type": "message",
                 "label": "Details",
-                "text": "Designed a web service to automatically provide a customized travel plan based on user preferences. Implemented frontend with React, backend with Node.js, and fetched data from MongoDB."
+                "text": "Lazy Travel"
               }
             }
           ]
@@ -93,7 +93,7 @@
               "action": {
                 "type": "message",
                 "label": "Details",
-                "text": "Constructed financial portfolios based on stock price prediction and user risk preferences. Predicted future seven day moving averages of stock price and compared the performances of Random Forest, XGBoost, RNN, LSTM, GRU, and Prophet."
+                "text": "Financial Advisory Bot"
               }
             }
           ]
@@ -142,7 +142,7 @@
               "action": {
                 "type": "message",
                 "label": "Details",
-                "text": "Improved the QoS of multi-player connection game by reducing the number of packets transferred under different situations and through the use of interpolation."
+                "text": "Multi-Player Karting"
               }
             }
           ]
@@ -195,7 +195,7 @@
               "action": {
                 "type": "message",
                 "label": "Details",
-                "text": "Real world problem provided by Cathay Life Insurance Co. Solved the problem of arranging shifts manually on a monthly basis and achieve optimal performance measures based on labor prediction and various constraints using integer linear programming."
+                "text": "Auto Shift Arrangement"
               }
             }
           ]
@@ -244,7 +244,7 @@
               "action": {
                 "type": "message",
                 "label": "Details",
-                "text": "Built a system capable of motion sensing through VL53L0X and transmitting images to computers and mobile devices through the use of Wifi established connection between STM32 and RPi."
+                "text": "Anti-Thief System"
               }
             }
           ]
@@ -293,7 +293,7 @@
               "action": {
                 "type": "message",
                 "label": "Details",
-                "text": "Designed a closet with classification functions through vision recognition of AWS. Won enterprise award from STMicroelectronics among 200 participants."
+                "text": "Classifiable Closet"
               }
             }
           ]

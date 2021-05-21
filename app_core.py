@@ -46,11 +46,53 @@ def echo(event):
                 event.reply_token,
                 TextSendMessage(text=txt)
             )
-        elif event.message.text == "專案":
+        elif event.message.text == "projects":
             FlexMessage = json.load(open('replies/projects.json','r',encoding='utf-8'))
             line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage('projects',FlexMessage)
+            )
+        elif event.message.text == "Lazy Travel"
+            txt = Path('replies/projects/lazytravel.txt').read_text()
+            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+        elif event.message.text == "Financial Advisory Bot"
+            txt = Path('replies/projects/financialadvisorybot.txt').read_text()
+            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+        elif event.message.text == "Multi-Player Karting"
+            txt = Path('replies/projects/multiplayerkarting.txt').read_text()
+            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+        elif event.message.text == "Auto Shift Arrangement"
+            txt = Path('replies/projects/autoshiftarrangement.txt').read_text()
+            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+        elif event.message.text == "Anti-Thief System"
+            txt = Path('replies/projects/antithiefsystem.txt').read_text()
+            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+        elif event.message.text == "Classfiable Closet"
+            txt = Path('replies/projects/classifiablecloset.txt').read_text()
+            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
             )
         else:
             line_bot_api.reply_message(
