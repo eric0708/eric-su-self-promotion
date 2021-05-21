@@ -1,12 +1,13 @@
 from __future__ import unicode_literals
 import os
 import configparser
+import json
 from pathlib import Path
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, FlexSendMessage
 
 app = Flask(__name__)
 
@@ -46,11 +47,10 @@ def echo(event):
                 TextSendMessage(text=txt)
             )
         elif event.message.text == "專案":
-            txt = Path('replies/projects.txt').read_text()
-            #txt = txt.replace('\n', '')
+            FlexMessage = json.load(open('replies/projects.json','r',encoding='utf-8'))
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text=txt)
+                FlexSendMessage('projects',FlexMessage)
             )
         else:
             line_bot_api.reply_message(
