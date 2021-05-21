@@ -1,6 +1,10 @@
-我是蘇彥碩，目前是國立臺灣大學電機系的大四生，研究興趣是機器學習以及演算法。
-在課業之餘，也有從事研究與開發的經驗，包括自動旅遊規劃網站、理財機器人、以及自動排班模型。
-平常喜歡涉略多方面的知識，也透過雙主修會計系來多學習一點金融相關知識。
-也常常會透過讀書會和同學探討最新的知識與科技，我深信藉由一起學習，更能達到事半功倍的效果。
-透過良好的時間規劃能力，我能夠兼顧課業以及各項活動。
-最後，也希望能夠爭取實習的機會，朝著成為一位成功與全面的工程師更近一步。
+My thirst for knowledge is unquenchable. Always looking for more to learn, 
+I treasure every opportunity to broaden my horizons. I not only persist 
+in my studies, but also in various researches and projects. I also make 
+great effort on conducting book clubs to discuss the latest knowledge and 
+technology with my peers. By learning together as a group, we can achieve 
+a lot more than by oneself, and I believe everyone has merits that I can 
+learn from. To accommodate so much into my time, I always plan ahead of 
+time effectively and efficiently. Through the internship program, I wish to 
+learn more at the data position to further enhance my ability and become 
+a successful and well-rounded engineer.

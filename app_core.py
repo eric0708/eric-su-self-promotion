@@ -39,7 +39,7 @@ def echo(event):
     
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
 
-        if event.message.text == "簡介":
+        if event.message.text == "self introduction":
             txt = Path('replies/intro.txt').read_text()
             txt = txt.replace('\n', '')
             line_bot_api.reply_message(
@@ -87,7 +87,7 @@ def echo(event):
                 event.reply_token,
                 TextSendMessage(text=txt)
             )
-        elif event.message.text == "Classfiable Closet":
+        elif event.message.text == "Classifiable Closet":
             txt = Path('replies/projects/classifiablecloset.txt').read_text()
             txt = txt.replace('\n', '')
             line_bot_api.reply_message(
