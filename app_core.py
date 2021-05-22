@@ -39,62 +39,44 @@ def echo(event):
     
     if event.source.user_id != "Udeadbeefdeadbeefdeadbeefdeadbeef":
 
-        if event.message.text == "self introduction":
-            txt = Path('replies/intro.txt').read_text()
-            txt = txt.replace('\n', '')
+        message_replied = False
+
+        try:
+            filename = event.message.text.replace(' ', '')
+            txt = Path('replies/'+filename+'.txt').read_text()
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=txt)
             )
-        elif event.message.text == "projects":
-            FlexMessage = json.load(open('replies/projects.json','r',encoding='utf-8'))
+            message_replied = True
+        except ExplicitException:
+            pass
+
+        try:
+            filename = event.message.text.replace(' ', '')
+            FlexMessage = json.load(open('replies/'+filename+'.json','r',encoding='utf-8'))
             line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage('projects',FlexMessage)
             )
-        elif event.message.text == "Lazy Travel":
-            txt = Path('replies/projects/lazytravel.txt').read_text()
+            message_replied = True
+        except ExplicitException:
+            pass
+        
+        try:
+            filename = event.message.text.replace(' ','')
+            filename = filename.replace('-','')
+            txt = Path('replies/projects/'+filename.lower()+'.txt').read_text()
             txt = txt.replace('\n', '')
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=txt)
             )
-        elif event.message.text == "Financial Advisory Bot":
-            txt = Path('replies/projects/financialadvisorybot.txt').read_text()
-            txt = txt.replace('\n', '')
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text=txt)
-            )
-        elif event.message.text == "Multi-Player Karting":
-            txt = Path('replies/projects/multiplayerkarting.txt').read_text()
-            txt = txt.replace('\n', '')
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text=txt)
-            )
-        elif event.message.text == "Auto Shift Arrangement":
-            txt = Path('replies/projects/autoshiftarrangement.txt').read_text()
-            txt = txt.replace('\n', '')
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text=txt)
-            )
-        elif event.message.text == "Anti-Thief System":
-            txt = Path('replies/projects/antithiefsystem.txt').read_text()
-            txt = txt.replace('\n', '')
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text=txt)
-            )
-        elif event.message.text == "Classifiable Closet":
-            txt = Path('replies/projects/classifiablecloset.txt').read_text()
-            txt = txt.replace('\n', '')
-            line_bot_api.reply_message(
-                event.reply_token,
-                TextSendMessage(text=txt)
-            )
-        else:
+            message_replied = True
+        except ExplicitException:
+            pass
+
+        if message_replied == False:
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=event.message.text)
