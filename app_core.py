@@ -44,7 +44,6 @@ def echo(event):
         try:
             filename = event.message.text.replace(' ', '')
             txt = Path('replies/'+filename.lower()+'.txt').read_text()
-            txt = txt.replace('\n', '')
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=txt)
