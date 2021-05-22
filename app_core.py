@@ -57,7 +57,7 @@ def echo(event):
             FlexMessage = json.load(open('replies/'+filename.lower()+'.json','r',encoding='utf-8'))
             line_bot_api.reply_message(
                 event.reply_token,
-                FlexSendMessage('projects',FlexMessage)
+                FlexSendMessage('Message',FlexMessage)
             )
             message_replied = True
         except Exception:
