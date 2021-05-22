@@ -22,11 +22,13 @@
               "text": "Lazy Travel",
               "wrap": true,
               "weight": "bold",
-              "size": "xl"
+              "size": "xl",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "Web Programming Final Project"
+              "text": "Web Programming Final Project",
+              "align": "center"
             }
           ],
           "margin": "none",
@@ -71,11 +73,13 @@
               "text": "Financial Advisory Bot",
               "wrap": true,
               "weight": "bold",
-              "size": "xl"
+              "size": "xl",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "Financial Technology Final Project"
+              "text": "Financial Technology Final Project",
+              "align": "center"
             }
           ],
           "margin": "none",
@@ -120,11 +124,13 @@
               "text": "Multi-Player Karting",
               "wrap": true,
               "weight": "bold",
-              "size": "xl"
+              "size": "xl",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "Computer Networks Final Project"
+              "text": "Computer Networks Final Project",
+              "align": "center"
             }
           ],
           "margin": "none",
@@ -169,15 +175,18 @@
               "text": "Auto Shift Arrangement",
               "wrap": true,
               "weight": "bold",
-              "size": "xl"
+              "size": "xl",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "FinTech-Text Mining and"
+              "text": "FinTech-Text Mining and",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "Machine Learning Final Project"
+              "text": "Machine Learning Final Project",
+              "align": "center"
             }
           ],
           "margin": "none",
@@ -222,11 +231,13 @@
               "text": "Anti-Thief System",
               "wrap": true,
               "weight": "bold",
-              "size": "xl"
+              "size": "xl",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "Embedded System Final Project"
+              "text": "Embedded System Final Project",
+              "align": "center"
             }
           ],
           "margin": "none",
@@ -271,11 +282,13 @@
               "text": "Classifiable Closet",
               "wrap": true,
               "weight": "bold",
-              "size": "xl"
+              "size": "xl",
+              "align": "center"
             },
             {
               "type": "text",
-              "text": "2019 MakeNTU competition"
+              "text": "2019 MakeNTU competition",
+              "align": "center"
             }
           ],
           "margin": "none",

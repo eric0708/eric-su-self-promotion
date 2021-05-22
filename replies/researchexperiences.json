@@ -77,12 +77,6 @@
             },
             {
               "type": "text",
-              "text": "      ",
-              "size": "xl",
-              "margin": "30px"
-            },
-            {
-              "type": "text",
               "text": "National Taiwan University",
               "weight": "bold"
             },

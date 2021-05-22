@@ -36,7 +36,8 @@
             },
             {
               "type": "text",
-              "text": "Jul. 2016 - Present"
+              "text": "Jul. 2016 - Present",
+              "align": "center"
             }
           ],
           "alignItems": "center"
@@ -87,7 +88,8 @@
             },
             {
               "type": "text",
-              "text": "Apr. 2020 - Present"
+              "text": "Apr. 2020 - Present",
+              "align": "center"
             }
           ],
           "alignItems": "center"
@@ -139,7 +141,8 @@
             },
             {
               "type": "text",
-              "text": "Mar. - May 2020"
+              "text": "Mar. - May 2020",
+              "align": "center"
             }
           ],
           "alignItems": "center"
@@ -191,7 +194,8 @@
             },
             {
               "type": "text",
-              "text": "Apr. - Jun. 2019"
+              "text": "Apr. - Jun. 2019",
+              "align": "center"
             }
           ],
           "alignItems": "center"

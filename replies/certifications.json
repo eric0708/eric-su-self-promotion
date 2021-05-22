@@ -82,7 +82,8 @@
           },
           {
             "type": "text",
-            "text": "Total Score: 328"
+            "text": "Total Score: 328",
+            "align": "center"
           }
         ],
         "alignItems": "center"
@@ -134,7 +135,8 @@
           },
           {
             "type": "text",
-            "text": "Overall Band Score: 7.5"
+            "text": "Overall Band Score: 7.5",
+            "align": "center"
           }
         ],
         "alignItems": "center"
