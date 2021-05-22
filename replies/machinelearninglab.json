@@ -1,0 +1,88 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://www.researchgate.net/publication/343032072/figure/fig1/AS:914468326354945@1595037647655/Basic-structure-of-a-single-video-caption-generation-model-The-encoder-part-of-the.png"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Video Caption Generation with Sequence-to-Sequence Model",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Video Caption Generation with Sequence-to-Sequence Model"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://www.shortlist.com/media/imager/201905/29420-posts.article_md.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Deep Reinforcement Learning-Policy Gradient",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Deep Reinforcement Learning-Policy Gradient"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

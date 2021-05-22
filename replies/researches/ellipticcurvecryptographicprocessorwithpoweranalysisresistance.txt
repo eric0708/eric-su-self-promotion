@@ -1,0 +1,2 @@
+* Studied how hardware speed and power consumption can be improved through heterogeneous architecture with fully pipelined PEs and local memory synchronization scheme
+* Studied how elliptic curve cryptographic processors guard against power analysis attacks using double-and-add-always and key-blinded techniques

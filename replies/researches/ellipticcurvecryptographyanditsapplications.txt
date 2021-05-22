@@ -1,0 +1,2 @@
+* Studied elliptic curve cryptography and digital signature algorithms
+* Implemented the ECC cryptosystem from scratch using both MATLAB and Verilog

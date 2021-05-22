@@ -1,0 +1,88 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://qvault.io/wp-content/uploads/2020/09/Elliptic-curve-blog-post-min.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Elliptic Curve Cryptography and Its Applications",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Elliptic Curve Cryptography and Its Applications"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://www.researchgate.net/profile/Sandeep-Kumar-313/publication/3251519/figure/fig2/AS:669988591501318@1536749136424/Area-optimized-GF2-m-elliptic-curve-cryptography-ECC-processor.png"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Elliptic Curve Cryptographic Processor with Power Analysis Resistance",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Elliptic Curve Cryptographic Processor with Power Analysis Resistance"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

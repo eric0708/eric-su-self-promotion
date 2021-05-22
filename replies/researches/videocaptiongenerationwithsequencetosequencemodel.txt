@@ -1,0 +1,1 @@
+* Improved a video caption generation model by implementing attention, schedule sampling, and beam search in the training process

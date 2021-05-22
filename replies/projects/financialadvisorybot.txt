@@ -1,4 +1,2 @@
-Constructed financial portfolios based on stock price prediction 
-and user risk preferences. Predicted future seven day moving 
-averages of stock price and compared the performances of Random 
-Forest, XGBoost, RNN, LSTM, GRU, and Prophet.
+* Constructed financial portfolios based on stock price prediction and user risk preferences 
+* Predicted future seven day moving averages of stock price and compared the performances of Random Forest, XGBoost, RNN, LSTM, GRU, and Prophet

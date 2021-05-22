@@ -1,0 +1,118 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://www.allaboutcircuits.com/uploads/articles/Integrated_circuit_chip_by_takuyaabe.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Integrated Circuit and System Design Lab",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl"
+            },
+            {
+              "type": "text",
+              "text": "National Taiwan University",
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": "Advisor: Professor Tsung-Te Liu"
+            },
+            {
+              "type": "text",
+              "text": "Feb. - Jul. 2020"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Integrated Circuit and System Design Lab"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://images.idgesg.net/images/article/2020/07/machine-learning-and-mlops-hpe-ezmeral-softwaretg-100851051-large.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Machine Learning Lab",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl"
+            },
+            {
+              "type": "text",
+              "text": "      ",
+              "size": "xl",
+              "margin": "30px"
+            },
+            {
+              "type": "text",
+              "text": "National Taiwan University",
+              "weight": "bold"
+            },
+            {
+              "type": "text",
+              "text": "Advisor: Professor Hung-Yi Lee"
+            },
+            {
+              "type": "text",
+              "text": "Jul. 2018 - Jan. 2019"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Machine Learning Lab"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

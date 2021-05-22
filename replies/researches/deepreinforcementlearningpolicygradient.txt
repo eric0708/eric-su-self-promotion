@@ -1,0 +1,1 @@
+* Implemented policy gradient on an agent to play the game of pong and improved performance through variance reduction and trust region policy optimization

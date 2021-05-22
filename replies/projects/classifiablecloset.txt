@@ -1,3 +1,2 @@
-Designed a closet with classification functions through vision 
-recognition of AWS. Won enterprise award from STMicroelectronics 
-among 200 participants.
+* Designed a closet with classification functions through vision recognition of AWS
+* Won enterprise award from STMicroelectronics among 200 participants

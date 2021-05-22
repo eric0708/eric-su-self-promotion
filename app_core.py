@@ -43,7 +43,7 @@ def echo(event):
 
         try:
             filename = event.message.text.replace(' ', '')
-            txt = Path('replies/'+filename+'.txt').read_text()
+            txt = Path('replies/'+filename.lower()+'.txt').read_text()
             txt = txt.replace('\n', '')
             line_bot_api.reply_message(
                 event.reply_token,
@@ -55,7 +55,7 @@ def echo(event):
 
         try:
             filename = event.message.text.replace(' ', '')
-            FlexMessage = json.load(open('replies/'+filename+'.json','r',encoding='utf-8'))
+            FlexMessage = json.load(open('replies/'+filename.lower()+'.json','r',encoding='utf-8'))
             line_bot_api.reply_message(
                 event.reply_token,
                 FlexSendMessage('projects',FlexMessage)
@@ -68,7 +68,18 @@ def echo(event):
             filename = event.message.text.replace(' ','')
             filename = filename.replace('-','')
             txt = Path('replies/projects/'+filename.lower()+'.txt').read_text()
-            txt = txt.replace('\n', '')
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+        except Exception:
+            pass
+
+        try:
+            filename = event.message.text.replace(' ','')
+            filename = filename.replace('-','')
+            txt = Path('replies/researches/'+filename.lower()+'.txt').read_text()
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=txt)
