@@ -1,0 +1,161 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_1440,w_720,f_auto,q_60/1499722/海培國際_TOELF托福課程_soffmr.gif"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "TOEFL",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Aug. 2020",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Total Score: 112",
+              "align": "center"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "TOEFL"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://1.bp.blogspot.com/-TIwnt2-cdrI/X0FcTz-Dp5I/AAAAAAAAG5M/93pX_Y0y7voJpLI71Ms7Ha3dPFGZJQrIgCLcBGAsYHQ/s878/grepic.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "GRE",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Mar. 2020",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Total Score: 328"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "GRE"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://www.britishcouncil.in/sites/default/files/ielts_4.png"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "IELTS",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Jan. 2016",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Overall Band Score: 7.5"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "IELTS"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

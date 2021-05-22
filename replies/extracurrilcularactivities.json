@@ -1,0 +1,218 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://i.ytimg.com/vi/G-2Q6pLwbqY/maxresdefault.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Head Teaching Assistant",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "align": "center",
+              "text": " ",
+              "margin": "30px"
+            },
+            {
+              "type": "text",
+              "text": "Herjer Education Institute",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Jul. 2016 - Present"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Head Teaching Assistant"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.6435-9/110256790_1186650715020636_5941335613875361419_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=e3f864&_nc_ohc=3vTpcXsf5vQAX8sYpE5&_nc_ht=scontent.ftpe7-4.fna&oh=2fa998a0639e5ee5222c0c2e2ee8aaf6&oe=60CFE7F6"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "CFO of FinTech & RegTech Club",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "National Taiwan University",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Apr. 2020 - Present"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "CFO of FinTech & RegTech Club"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://1.bp.blogspot.com/-L1U47cH8SLI/Xo1mGPr_xmI/AAAAAAAADUg/U7Mq8R2_LpEq8KZA5ZfSI_Zgg2X0l9QTgCLcBGAsYHQ/s1600/92098982_2945078208871921_6913935647547850752_o.png"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "ATONA Case Competition",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "ATONA INC.",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Mar. - May 2020"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "ATONA Case Competition"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "size": "full",
+          "aspectRatio": "20:10",
+          "aspectMode": "cover",
+          "url": "https://i.ytimg.com/vi/PU-SeNfIRcs/maxresdefault.jpg"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Physic Experiment Design Competition",
+              "wrap": true,
+              "weight": "bold",
+              "size": "xl",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "National Taiwan University",
+              "align": "center"
+            },
+            {
+              "type": "text",
+              "text": "Apr. - Jun. 2019"
+            }
+          ],
+          "alignItems": "center"
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "flex": 2,
+              "style": "primary",
+              "action": {
+                "type": "message",
+                "label": "Details",
+                "text": "Physic Experiment Design Competition"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }

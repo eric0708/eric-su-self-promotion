@@ -88,6 +88,30 @@ def echo(event):
         except Exception:
             pass
 
+        try:
+            filename = event.message.text.replace(' ','')
+            filename = filename.replace('-','')
+            txt = Path('replies/extracurricularactivities/'+filename.lower()+'.txt').read_text()
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+        except Exception:
+            pass
+
+        try:
+            filename = event.message.text.replace(' ','')
+            filename = filename.replace('-','')
+            txt = Path('replies/certifications/'+filename.lower()+'.txt').read_text()
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+        except Exception:
+            pass
+
         if message_replied == False:
             line_bot_api.reply_message(
                 event.reply_token,

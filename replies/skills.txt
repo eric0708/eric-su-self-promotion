@@ -1,0 +1,4 @@
+* Programming: C++, Python, Scikit-Learn, Java, Javascript, HTML, Verilog, MATLAB, React, MongoDB
+* Operating System: Linux, MacOS, Windows
+* PSpice, Simplis, Altium Designer
+* Languages: Mandarin Chinese (native), English (lived in the USA from 2005 to 2010)
