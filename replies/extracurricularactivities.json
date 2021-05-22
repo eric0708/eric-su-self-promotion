@@ -25,12 +25,6 @@
             },
             {
               "type": "text",
-              "align": "center",
-              "text": " ",
-              "margin": "30px"
-            },
-            {
-              "type": "text",
               "text": "Herjer Education Institute",
               "align": "center"
             },
