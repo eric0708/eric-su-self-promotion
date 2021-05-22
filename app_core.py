@@ -49,7 +49,7 @@ def echo(event):
                 TextSendMessage(text=txt)
             )
             message_replied = True
-        except ExplicitException:
+        except Exception:
             pass
 
         try:
@@ -60,7 +60,7 @@ def echo(event):
                 FlexSendMessage('projects',FlexMessage)
             )
             message_replied = True
-        except ExplicitException:
+        except Exception:
             pass
         
         try:
@@ -73,7 +73,7 @@ def echo(event):
                 TextSendMessage(text=txt)
             )
             message_replied = True
-        except ExplicitException:
+        except Exception:
             pass
 
         if message_replied == False:
