@@ -1,5 +1,9 @@
 * Listening: 9.0
+
 * Reading: 8.5
+
 * Writing: 6.0
+
 * Speaking: 7.0
+
 * Overall Band Score: 7.5
