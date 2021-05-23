@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 import os
 import psycopg2
 import configparser
+import requests
 import json
 import datetime
 from pathlib import Path
@@ -19,6 +20,53 @@ config.read('config.ini')
 
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
+
+# set LINE Chatbot rich menu
+headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"application/json"}
+
+body = {
+    "size": {"width": 2500, "height": 1686},
+    "selected": "true",
+    "name": "Controller",
+    "chatBarText": "Controller",
+    "areas":[
+        {
+          "bounds": {"x": 0, "y": 0, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "self introduction"}
+        },
+        {
+          "bounds": {"x": 625, "y": 0, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "education"}
+        },
+        {
+          "bounds": {"x": 1250, "y": 0, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "research interests"}
+        },
+        {
+          "bounds": {"x": 1875, "y": 0, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "research experiences"}
+        },
+        {
+          "bounds": {"x": 0, "y": 843, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "projects"}
+        },
+        {
+          "bounds": {"x": 625, "y": 843, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "skills"}
+        },
+        {
+          "bounds": {"x": 1250, "y": 843, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "certifications"}
+        },
+        {
+          "bounds": {"x": 1875, "y": 843, "width": 625, "height": 843},
+          "action": {"type": "message", "text": "extracurricular activities"}
+        }
+    ]
+  }
+
+req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu', 
+                       headers=headers,data=json.dumps(body).encode('utf-8'))
 
 # connect to database and create table
 try:
