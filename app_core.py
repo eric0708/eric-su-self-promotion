@@ -69,13 +69,14 @@ req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu',
                        headers=headers,data=json.dumps(body).encode('utf-8'))
 print(req.text)
 """
-"""
-with open("control.jpg", 'rb') as f:
-    line_bot_api.set_rich_menu_image("richmenu-762...", "image/jpeg", f)
-"""
-req = requests.request('POST', 'https://api.line.me/v2/bot/user/all/richmenu/'+config.get('line-bot', 'richmenu_id'), 
+richmenu_id = 'richmenu-bca18a3ad10c9ffc246895d3dfbaf564'
+
+with open("images/richmenu.jpg", 'rb') as f:
+    line_bot_api.set_rich_menu_image(richmenu_id, "image/jpeg", f)
+
+req = requests.request('POST', 'https://api.line.me/v2/bot/user/all/richmenu/'+richmenu_id, 
                        headers=headers)
-print(req.text)
+#print(req.text)
 
 # connect to database and create table
 try:
