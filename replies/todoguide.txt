@@ -11,7 +11,7 @@ year/month/day todoname
 example:
 add todo
 2021/5/26 final project due
-2021/5/28 meeting with classmates
+2021/5/28 meeting
 2021/5/30 lunch with friend
 
 
@@ -25,7 +25,7 @@ year/month/day todoname
 example:
 delete todo
 2021/5/26 final project due
-2021/5/28 meeting with classmates
+2021/5/28 meeting
 
 
 * List all todos
