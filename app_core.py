@@ -235,7 +235,7 @@ def list_all_todos(username):
     for todo in todo_list:
         todo_name = todo[2]
         todo_date = todo[3]
-        message = message + str(todo_date.year)+'/'+str(todo_date[1].month)+'/'+str(todo_date[2].day)+' '+todo_name+'\n'
+        message = message + str(todo_date.year)+'/'+str(todo_date.month)+'/'+str(todo_date.day)+' '+todo_name+'\n'
     
     cursor.close()
     conn.close()
