@@ -227,7 +227,7 @@ def list_all_todos(username):
 
     postgres_select_query = f"""SELECT * FROM todo_list where name = %s"""
 
-    cursor.execute(postgres_select_query, username)
+    cursor.execute(postgres_select_query, (username,))
     todo_list = cursor.fetchall()
     
     message = "Todos\n"
@@ -239,7 +239,7 @@ def list_all_todos(username):
     
     cursor.close()
     conn.close()
-    
+
     return message
 
 
