@@ -67,6 +67,7 @@ body = {
 
 req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu', 
                        headers=headers,data=json.dumps(body).encode('utf-8'))
+print(req.text)
 
 # connect to database and create table
 try:
