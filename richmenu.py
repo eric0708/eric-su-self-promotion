@@ -11,8 +11,8 @@ headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_toke
 body = {
     "size": {"width": 2500, "height": 1686},
     "selected": "true",
-    "name": "Controller",
-    "chatBarText": "Controller",
+    "name": "Control Panel",
+    "chatBarText": "Control Panel",
     "areas":[
         {
           "bounds": {"x": 0, "y": 0, "width": 625, "height": 843},
