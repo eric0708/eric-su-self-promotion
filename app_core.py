@@ -71,7 +71,7 @@ req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu',
                        headers=headers,data=json.dumps(body).encode('utf-8'))
 print(req.text)
 """
-richmenu_id = 'richmenu-bca18a3ad10c9ffc246895d3dfbaf564'
+richmenu_id = "richmenu-bca18a3ad10c9ffc246895d3dfbaf564"
 headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"application/json"}
 
 f = open("images/richmenu.jpg", 'rb')
