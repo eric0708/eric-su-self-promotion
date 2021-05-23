@@ -180,7 +180,7 @@ def insert_todo_list(todo_list):
     cursor = conn.cursor()
 
     table_columns = '(name, todo, deadline)'
-    postgres_insert_query = f"""INSERT INTO alpaca_training {table_columns} VALUES (%s,%s,%s)"""
+    postgres_insert_query = f"""INSERT INTO todo_list {table_columns} VALUES (%s,%s,%s)"""
 
     cursor.executemany(postgres_insert_query, todo_list)
     conn.commit()
