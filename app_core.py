@@ -21,23 +21,26 @@ line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 # connect to database and create table
-DATABASE_URL = os.environ['DATABASE_URL']
+try:
+    DATABASE_URL = os.environ['DATABASE_URL']
 
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-cursor = conn.cursor()
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cursor = conn.cursor()
 
-create_table_query = '''CREATE TABLE todo_list(
-    record_no serial PRIMARY KEY,
-    name VARCHAR (100) NOT NULL,
-    todo VARCHAR (100) NOT NULL,
-    deadline DATE NOT NULL
-);'''
+    create_table_query = '''CREATE TABLE todo_list(
+        record_no serial PRIMARY KEY,
+        name VARCHAR (100) NOT NULL,
+        todo VARCHAR (100) NOT NULL,
+        deadline DATE NOT NULL
+    );'''
 
-cursor.execute(create_table_query)
-conn.commit()
+    cursor.execute(create_table_query)
+    conn.commit()
 
-cursor.close()
-conn.close()
+    cursor.close()
+    conn.close()
+except Exception:
+    pass
 
 
 # get information from LINE
