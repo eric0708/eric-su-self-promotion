@@ -216,7 +216,7 @@ def delete_todo(todo_list):
 
     postgres_delete_query = f"""Delete from todo_list where name = %s and todo = %s and deadline = %s"""
 
-    cursor.executemany(postgres_delete_query, todo_list
+    cursor.executemany(postgres_delete_query, todo_list)
     conn.commit()
 
     message = f"{cursor.rowcount} todo(s) deleted!"
