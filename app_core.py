@@ -166,7 +166,7 @@ def prepare_todo_list(text, username):
     for todo_item in text_list[1:]:
         temp_date = todo_item.split(' ')[0].split('/')
         todo_name = todo_item.split(' ', 1)[1]
-        deadline = datetime.date(temp_date[0], temp_date[1], temp_date[2])
+        deadline = datetime.date(int(temp_date[0]), int(temp_date[1]), int(temp_date[2]))
         todo = (username, todo_name, deadline)
         todo_list.append(todo)
     
