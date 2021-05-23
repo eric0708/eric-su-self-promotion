@@ -151,7 +151,14 @@ def echo(event):
                 TextSendMessage(text=txt)
             )
             message_replied = True
-
+        elif event.message.text.lower() == 'list all todos':
+            txt = list_all_todos(event.source.user_id)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+        
         if message_replied == False:
             line_bot_api.reply_message(
                 event.reply_token,
@@ -209,6 +216,30 @@ def delete_all_todos(username):
     cursor.close()
     conn.close()
 
+    return message
+
+# list all todos
+def list_all_todos(username):
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cursor = conn.cursor()
+
+    postgres_select_query = f"""SELECT * FROM todo_list where name = %s"""
+
+    cursor.execute(postgres_select_query, username)
+    todo_list = cursor.fetchall()
+    
+    message = "Todos\n"
+
+    for todo in todo_list:
+        todo_name = todo[2]
+        todo_date = todo[3]
+        message = message + todo_date.year+'/'+todo_date[1].month+'/'+todo_date[2].day+' '+todo_name+'\n'
+    
+    cursor.close()
+    conn.close()
+    
     return message
 
 
