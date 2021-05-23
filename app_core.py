@@ -136,9 +136,17 @@ def echo(event):
         except Exception:
             pass
 
-        if event.message.text.split('\n')[0].lower() == 'todo':
+        if event.message.text.split('\n')[0].lower() == 'add todo':
             todo_list = prepare_todo_list(event.message.text, event.source.user_id)
             txt = insert_todo_list(todo_list)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+        elif event.message.text.split('\n')[0].lower() == 'delete todo':
+            todo_list = prepare_todo_list(event.message.text, event.source.user_id)
+            txt = delete_todo(todo_list)
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=txt)
@@ -193,6 +201,25 @@ def insert_todo_list(todo_list):
     conn.commit()
 
     message = f"{cursor.rowcount} todo(s) added to the todo list"
+
+    cursor.close()
+    conn.close()
+
+    return message
+
+# delete todo
+def delete_todo(todo_list):
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cursor = conn.cursor()
+
+    postgres_delete_query = f"""Delete from todo_list where name = %s and todo = %s and deadline = %s"""
+
+    cursor.executemany(postgres_delete_query, todo_list
+    conn.commit()
+
+    message = f"{cursor.rowcount} todo(s) deleted!"
 
     cursor.close()
     conn.close()
