@@ -229,15 +229,18 @@ def list_all_todos(username):
 
     cursor.execute(postgres_select_query, (username,))
     todo_list = cursor.fetchall()
-    
-    message = "Todos\n"
 
-    for todo in todo_list:
-        todo_name = todo[2]
-        todo_date = todo[3]
-        message = message + str(todo_date.year)+'/'+str(todo_date.month)+'/'+str(todo_date.day)+' '+todo_name+'\n'
-    
-    message = message[0:-1]
+    if cursor.rowcount == 0:
+        message = "No Todos"
+    else: 
+        message = "Todos\n"
+
+        for todo in todo_list:
+            todo_name = todo[2]
+            todo_date = todo[3]
+            message = message + str(todo_date.year)+'/'+str(todo_date.month)+'/'+str(todo_date.day)+' '+todo_name+'\n'
+        
+        message = message[0:-1]
 
     cursor.close()
     conn.close()
