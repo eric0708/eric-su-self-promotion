@@ -208,7 +208,7 @@ def delete_all_todos(username):
 
     postgres_delete_query = """Delete from todo_list where name = %s"""
     
-    cursor.executemany(postgres_delete_query, (username,))
+    cursor.executemany(postgres_delete_query, username)
     conn.commit()
 
     message = "All todos deleted!"
