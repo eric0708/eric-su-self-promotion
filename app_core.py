@@ -211,7 +211,7 @@ def delete_all_todos(username):
     cursor.executemany(postgres_delete_query, username)
     conn.commit()
 
-    message = "All todos deleted!"
+    message = f"{cursor.rowcount} todo(s) deleted!"
 
     cursor.close()
     conn.close()
