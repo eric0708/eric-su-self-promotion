@@ -22,7 +22,7 @@ line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 # set LINE Chatbot rich menu
-headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"image/jpeg"}
+
 """
 headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"application/json"}
 
@@ -72,11 +72,12 @@ req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu',
 print(req.text)
 """
 richmenu_id = 'richmenu-bca18a3ad10c9ffc246895d3dfbaf564'
+headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"image/jpeg"}
 
 with open("images/richmenu.jpg", 'rb') as f:
     line_bot_api.set_rich_menu_image(richmenu_id, "image/jpeg", f)
 
-req = requests.request('POST', 'https://api-data.line.me/v2/bot/richmenu/'+richmenu_id+'/content', 
+req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu/'+richmenu_id+'/content', 
                        headers=headers)
 #print(req.text)
 
