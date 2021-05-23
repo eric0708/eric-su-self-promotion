@@ -206,7 +206,7 @@ def delete_all_todos(username):
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     cursor = conn.cursor()
 
-    postgres_delete_query = f"""Delete from todo_list where name = %s"""
+    postgres_delete_query = f"""Delete * from todo_list where name = %s"""
     
     cursor.executemany(postgres_delete_query, username)
     conn.commit()
