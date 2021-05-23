@@ -1,7 +1,9 @@
 from __future__ import unicode_literals
 import os
+import psycopg2
 import configparser
 import json
+import datetime
 from pathlib import Path
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
@@ -11,14 +13,34 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage, FlexSendM
 
 app = Flask(__name__)
 
-# LINE 聊天機器人的基本資料
+# basic information for LINE Chatbot
 config = configparser.ConfigParser()
 config.read('config.ini')
 
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
-# 接收 LINE 的資訊
+# connect to database and create table
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+cursor = conn.cursor()
+
+create_table_query = '''CREATE TABLE todo_list(
+    record_no serial PRIMARY KEY,
+    name VARCHAR (100) NOT NULL,
+    todo VARCHAR (100) NOT NULL,
+    deadline DATE NOT NULL
+);'''
+
+cursor.execute(create_table_query)
+conn.commit()
+
+cursor.close()
+conn.close()
+
+
+# get information from LINE
 @app.route("/callback", methods=['POST'])
 def callback():
     signature = request.headers['X-Line-Signature']
@@ -33,7 +55,7 @@ def callback():
 
     return 'OK'
 
-# 學你說話
+# replies
 @handler.add(MessageEvent, message=TextMessage)
 def echo(event):
     
@@ -111,11 +133,81 @@ def echo(event):
         except Exception:
             pass
 
+        if event.message.text.split('\n')[0].lower() == 'todo':
+            todo_list = prepare_todo_list(event.message.text, event.source.user_id)
+            txt = insert_todo_list(todo_list)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+        elif event.message.text.lower() == 'delete all todos':
+            txt = delete_all_todos(event.source.user_id)
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=txt)
+            )
+            message_replied = True
+
         if message_replied == False:
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=event.message.text)
             )
+
+# prepare todo list
+def prepare_todo_list(text, username):
+    text_list = text.split('\n')
+    todo_list = []
+
+    for todo_item in text_list[1:]:
+        temp_date = todo_item.split(' ')[0].split('/')
+        todo_name = todo_item.split(' ')[1]
+        deadline = datetime.date(temp_date[0], temp_date[1], temp_date[2])
+        todo = (username, todo_name, deadline)
+        todo_list.append(todo)
+    
+    return todo_list
+
+# add todo list to database
+def insert_todo_list(todo_list):
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cursor = conn.cursor()
+
+    table_columns = '(name, todo, deadline)'
+    postgres_insert_query = f"""INSERT INTO alpaca_training {table_columns} VALUES (%s,%s,%s)"""
+
+    cursor.executemany(postgres_insert_query, todo_list)
+    conn.commit()
+
+    message = f"{cursor.rowcount} todo(s) added to the todo list"
+
+    cursor.close()
+    conn.close()
+
+    return message
+
+# delete all todos
+def delete_all_todos(username):
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    cursor = conn.cursor()
+
+    postgres_delete_query = """Delete from todo_list where name = %s"""
+    
+    cursor.executemany(postgres_delete_query, username)
+    conn.commit()
+
+    message = "All todos deleted!"
+
+    cursor.close()
+    conn.close()
+
+    return message
+
 
 if __name__ == "__main__":
     app.run()
