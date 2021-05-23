@@ -5,11 +5,11 @@ The todo function provides various commands to help you construct your todo list
 Add to your todo list by typing in the following format, multiple todos can be added at once:
 
 format:
-add todo
+add
 year/month/day todoname
 
 example:
-add todo
+add
 2021/5/26 final project due
 2021/5/28 meeting
 2021/5/30 lunch with friend
@@ -19,18 +19,18 @@ add todo
 Delete from your todo list by typing in the following format, multiple todos can be deleted at once:
 
 format:
-delete todo
+delete
 year/month/day todoname
 
 example:
-delete todo
+delete
 2021/5/26 final project due
 2021/5/28 meeting
 
 
 * List all todos
-List all todos on your todo list by typing "list all todos"
+List all todos on your todo list by typing "list all"
 
 
 * Delete all todos
-Delete all todos from your todo list by typing "delete all todos"
+Delete all todos from your todo list by typing "delete all"

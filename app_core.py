@@ -136,7 +136,7 @@ def echo(event):
         except Exception:
             pass
 
-        if event.message.text.split('\n')[0].lower() == 'add todo':
+        if event.message.text.split('\n')[0].lower() == 'add':
             todo_list = prepare_todo_list(event.message.text, event.source.user_id)
             txt = insert_todo_list(todo_list)
             line_bot_api.reply_message(
@@ -144,7 +144,7 @@ def echo(event):
                 TextSendMessage(text=txt)
             )
             message_replied = True
-        elif event.message.text.split('\n')[0].lower() == 'delete todo':
+        elif event.message.text.split('\n')[0].lower() == 'delete':
             todo_list = prepare_todo_list(event.message.text, event.source.user_id)
             txt = delete_todo(todo_list)
             line_bot_api.reply_message(
@@ -152,14 +152,14 @@ def echo(event):
                 TextSendMessage(text=txt)
             )
             message_replied = True
-        elif event.message.text.lower() == 'delete all todos':
+        elif event.message.text.lower() == 'delete all':
             txt = delete_all_todos(event.source.user_id)
             line_bot_api.reply_message(
                 event.reply_token,
                 TextSendMessage(text=txt)
             )
             message_replied = True
-        elif event.message.text.lower() == 'list all todos':
+        elif event.message.text.lower() == 'list all':
             txt = list_all_todos(event.source.user_id)
             line_bot_api.reply_message(
                 event.reply_token,

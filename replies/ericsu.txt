@@ -1,3 +1,14 @@
-Hi, I am Eric Su! You can learn more about me by typing "learn more", or by typing any of the keywords "self introduction", "education", "research interests", "research experiences", "projects", "skills", "certifications", or "extracurricular activities". Type "Eric Su" if you need to refer to the list of keywords anytime.
+Hi, I am Eric Su! (wink)You can learn more about me by typing "learn more", or by typing any of the following keywords:
 
-Also, this Chatbot has the function of helping you keep track of a todo list, type "todo guide" to learn more about the function.
+(star) self introduction
+(star) education
+(star) research interests
+(star) research experiences
+(star) projects
+(star) skills
+(star) certifications
+(star) extracurricular activities". 
+
+Type "Eric Su" if you need to refer to the list of keywords anytime.
+
+Also, this Chatbot has the function of helping you keep track of a todo list, type "todo guide" to learn more about the function.(grin)
