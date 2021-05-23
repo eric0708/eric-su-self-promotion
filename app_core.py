@@ -23,7 +23,7 @@ handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 # set LINE Chatbot rich menu
 headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"application/json"}
-
+"""
 body = {
     "size": {"width": 2500, "height": 1686},
     "selected": "true",
@@ -67,6 +67,14 @@ body = {
 
 req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu', 
                        headers=headers,data=json.dumps(body).encode('utf-8'))
+print(req.text)
+"""
+"""
+with open("control.jpg", 'rb') as f:
+    line_bot_api.set_rich_menu_image("richmenu-762...", "image/jpeg", f)
+"""
+req = requests.request('POST', 'https://api.line.me/v2/bot/user/all/richmenu/'+config.get('line-bot', 'richmenu_id'), 
+                       headers=headers)
 print(req.text)
 
 # connect to database and create table
