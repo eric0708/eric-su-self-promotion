@@ -24,3 +24,7 @@ This LINE Chatbot is used to learn more about Eric Su. Also, it provides the fun
 4. .gitignore: ignores the config.ini file when pushed to git
 5. README.md: instructions and explanations for the project
 6. richmenu.py: used to create rich menu and set rich menu image
+
+## QR Code for the LINE Chatbot
+
+![image](https://i.postimg.cc/Gp2n0cC9/2021-05-22-12-05-50.png)
