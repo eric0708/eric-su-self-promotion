@@ -1,4 +1,4 @@
-Hi, I am Eric Su! You can learn more about me by typing "learn more", or by typing any of the following keywords:
+Hi, I am Eric Su! You can learn more about me by using the control panel, by typing "learn more" or  any of the following keywords:
 
 * self introduction
 * education
@@ -7,8 +7,8 @@ Hi, I am Eric Su! You can learn more about me by typing "learn more", or by typi
 * projects
 * skills
 * certifications
-* extracurricular activities". 
+* extracurricular activities
 
 Type "Eric Su" if you need to refer to the list of keywords anytime.
 
-Also, this Chatbot has the function of helping you keep track of a todo list, type "todo guide" to learn more about the function.
+This Chatbot also has the function of helping you keep track of a todo list. type "todo guide" to learn more about the function.
