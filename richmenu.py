@@ -2,12 +2,14 @@ from linebot import (
     LineBotApi, WebhookHandler
 )
 import configparser
+import requests
+import json
 
 config = configparser.ConfigParser()
 config.read('config.ini')
 
 headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"application/json"}
-
+"""
 body = {
     "size": {"width": 2500, "height": 1686},
     "selected": "true",
@@ -52,8 +54,9 @@ body = {
 req = requests.request('POST', 'https://api.line.me/v2/bot/richmenu', 
                        headers=headers,data=json.dumps(body).encode('utf-8'))
 print(req.text)
-
+"""
 line_bot_api = LineBotApi(config.get('line-bot', 'channel_access_token'))
 
-with open("richmenu.jpg", 'rb') as f:
-    line_bot_api.set_rich_menu_image("richmenu-bca18a3ad10c9ffc246895d3dfbaf564", "image/jpeg", f)
+with open("images/richmenu.jpg", 'rb') as f:
+    line_bot_api.set_rich_menu_image("richmenu-31fa38a0b19f247efda2df3b494e767f", "image/jpeg", f)
+

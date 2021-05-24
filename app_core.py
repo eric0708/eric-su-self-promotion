@@ -23,7 +23,7 @@ handler = WebhookHandler(config.get('line-bot', 'channel_secret'))
 
 # set LINE Chatbot rich menu
 
-richmenu_id = "richmenu-bca18a3ad10c9ffc246895d3dfbaf564"
+richmenu_id = "richmenu-31fa38a0b19f247efda2df3b494e767f"
 headers = {"Authorization":"Bearer "+config.get('line-bot', 'channel_access_token'),"Content-Type":"application/json"}
 
 req = requests.request('POST', 'https://api.line.me/v2/bot/user/all/richmenu/'+richmenu_id, 
